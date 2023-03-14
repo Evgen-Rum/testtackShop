@@ -7,7 +7,7 @@ public class DBUtils {
     private static Connection connection;
     private static Statement statement;
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/shopTask";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/shopTask1";
     private static final String ROOT_NAME = "root";
     private static final String ROOT_PASSWORD = "Jeka09031999";
 

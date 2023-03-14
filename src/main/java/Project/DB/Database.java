@@ -4,29 +4,29 @@ import Utils.DBUtils;
 
 public class Database {
 
-    private static final String SQL_QUERY = "select shopTask.warehouse.*, " +
-            "shopTask.ten.numberOfProducts, " +
-            "shopTask.ten.orderNumber " +
-            "from shopTask.warehouse  " +
-            "inner join shopTask.ten on warehouse.id = ten.id " +
+    private static final String SQL_QUERY = "select shopTask1.warehouse.*, " +
+            "shopTask1.ten.numberOfProducts, " +
+            "shopTask1.ten.orderNumber " +
+            "from shopTask1.warehouse  " +
+            "inner join shopTask1.ten on warehouse.id = ten.id " +
             "union " +
-            "select shopTask.warehouse.*, " +
-            "shopTask.eleven.numberOfProducts, " +
-            "shopTask.eleven.orderNumber " +
-            "from shopTask.warehouse " +
-            "inner join shopTask.eleven on warehouse.id = eleven.id " +
+            "select shopTask1.warehouse.*, " +
+            "shopTask1.eleven.numberOfProducts, " +
+            "shopTask1.eleven.orderNumber " +
+            "from shopTask1.warehouse " +
+            "inner join shopTask1.eleven on warehouse.id = eleven.id " +
             "union " +
-            "select shopTask.warehouse.*, " +
-            "shopTask.fourteen.numberOfProducts, " +
-            "shopTask.fourteen.orderNumber " +
-            "from shopTask.warehouse " +
-            "inner join shopTask.fourteen on warehouse.id = fourteen.id " +
+            "select shopTask1.warehouse.*, " +
+            "shopTask1.fourteen.numberOfProducts, " +
+            "shopTask1.fourteen.orderNumber " +
+            "from shopTask1.warehouse " +
+            "inner join shopTask1.fourteen on warehouse.id = fourteen.id " +
             "union " +
-            "select shopTask.warehouse.*, " +
-            "shopTask.fifteen.numberOfProducts, " +
-            "shopTask.fifteen.orderNumber " +
-            "from shopTask.warehouse " +
-            "inner join shopTask.fifteen on warehouse.id = fifteen.id " +
+            "select shopTask1.warehouse.*, " +
+            "shopTask1.fifteen.numberOfProducts, " +
+            "shopTask1.fifteen.orderNumber " +
+            "from shopTask1.warehouse " +
+            "inner join shopTask1.fifteen on warehouse.id = fifteen.id " +
             "order by rackName";
 
     public static String[][] getDataFromBD() {
